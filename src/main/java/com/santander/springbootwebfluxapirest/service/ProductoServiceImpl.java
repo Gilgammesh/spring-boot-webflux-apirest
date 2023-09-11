@@ -31,6 +31,11 @@ public class ProductoServiceImpl implements ProductoService {
 	}
 
 	@Override
+	public Mono<Producto> findByNombre(String nombre) {
+		return productoRepository.findByNombre(nombre);
+	}
+
+	@Override
 	public Mono<Producto> save(Producto producto) {
 		return productoRepository.save(producto);
 	}
@@ -61,6 +66,11 @@ public class ProductoServiceImpl implements ProductoService {
 	@Override
 	public Mono<Categoria> findCategoriaById(String id) {
 		return categoriaRepository.findById(id);
+	}
+
+	@Override
+	public Mono<Categoria> findCategoriaByNombre(String nombre) {
+		return categoriaRepository.findByNombre(nombre);
 	}
 
 	@Override
