@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate;
 
 import lombok.extern.slf4j.Slf4j;
@@ -16,6 +17,7 @@ import com.santander.springbootwebfluxapirest.entity.Producto;
 import com.santander.springbootwebfluxapirest.service.ProductoService;
 
 @Slf4j
+@EnableDiscoveryClient
 @SpringBootApplication
 public class SpringBootWebfluxApirestApplication implements CommandLineRunner {
 
